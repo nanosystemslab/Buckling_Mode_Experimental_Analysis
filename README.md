@@ -133,69 +133,9 @@ The tool generates several output files in the specified output directory:
 
 ### 1. `max_force_summary.csv`
 Detailed results for all processed files:
-```csv
-Filename,Can_Height,Run_Number,Notes,Max_Force_N,Data_Points,Filepath
-90mm_05.csv,90mm,05,,311.9834,4240,/path/to/data/90mm_05.csv
-40mm_falsePeak_03.csv,40mm,03,falsePeak,145.2341,3890,/path/to/data/40mm_falsePeak_03.csv
-```
 
 ### 2. `height_summary.csv`
 Statistical summary grouped by can height:
-```csv
-Can_Height,Count,Mean_Force,Std_Force,Min_Force,Max_Force
-30mm,6,89.2345,12.3456,75.1234,105.6789
-40mm,15,156.7890,23.4567,134.5678,189.0123
-```
-
-## Example Output
-
-```
-======================================================================
-OVERALL STATISTICS
-======================================================================
-Total files processed: 85
-Maximum force: 450.1234 N
-Minimum force: 67.8901 N
-Average force: 234.5678 N
-Std deviation: 89.0123 N
-
-======================================================================
-STATISTICS BY CAN HEIGHT
-======================================================================
-           Count  Mean_Force  Std_Force  Min_Force  Max_Force
-Can_Height                                                    
-30mm           6    89.2345     12.3456    75.1234   105.6789
-40mm          15   156.7890     23.4567   134.5678   189.0123
-50mm           5   198.4567     15.7890   178.9012   220.3456
-60mm          16   267.8901     34.5678   201.2345   312.4567
-70mm           6   298.1234     28.9012   256.7890   334.5678
-80mm           5   356.7890     41.2345   298.4567   398.9012
-90mm           6   378.9123     38.4567   323.4567   421.2345
-100mm          6   398.1234     29.3456   356.7890   435.6789
-110mm          6   412.3456     25.6789   378.9012   445.6789
-120mm          6   423.4567     22.1234   389.0123   450.1234
-
-======================================================================
-FILES WITH SPECIAL CONDITIONS
-======================================================================
-  40mm_falsePeak_03.csv              | 40mm     | Notes: falsePeak
-  40mm_multiPeak_02.csv              | 40mm     | Notes: multiPeak
-  40mm_weird_01.csv                  | 40mm     | Notes: weird
-  40mm_widePeak_13.csv               | 40mm     | Notes: widePeak
-  50mm_doublePeak_05.csv             | 50mm     | Notes: doublePeak
-  60mm_sm1stPeak-maxAt2ndPeak_03.csv | 60mm     | Notes: sm1stPeak-maxAt2ndPeak
-  80mm_dualPeakAtMode1_02.csv        | 80mm     | Notes: dualPeakAtMode1
-  80mm_widePeakAtMode1_03.csv        | 80mm     | Notes: widePeakAtMode1
-
-======================================================================
-TOP 5 HIGHEST FORCES
-======================================================================
-  1. 120mm_03.csv                    | 120mm    |   450.1234 N
-  2. 120mm_05.csv                    | 120mm    |   448.9876 N
-  3. 110mm_04.csv                    | 110mm    |   445.6789 N
-  4. 120mm_02.csv                    | 120mm    |   443.2109 N
-  5. 120mm_01.csv                    | 120mm    |   441.8765 N
-```
 
 ## Development
 

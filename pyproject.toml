@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "buckling_mode_experimental_analysis"
+version = "0.1.0"
+description = "A tool for extracting maximum force values from buckling test CSV files"
+authors = ["Your Name <your.email@example.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [{ include = "buckling_mode_experimental_analysis", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.3.2"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+ruff = "^0.6.9"
+pytest = "^8.3.2"
+
+[tool.poetry.scripts]
+buckling_mode_experimental_analysis = "buckling_mode_experimental_analysis.cli:main"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+lint.select = ["E","F","I","UP","B","C4","TID","W"]
+lint.ignore = []
+exclude = ["build","dist",".venv"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["buckling_mode_experimental_analysis"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

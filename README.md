@@ -16,7 +16,7 @@ A Python package for analyzing buckling test data and extracting maximum force v
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone git@github.com:nanosystemslab/Buckling_Mode_Experimental_Analysis.git
 cd buckling-mode-experimental-analysis
 
 # Install using poetry (recommended)
